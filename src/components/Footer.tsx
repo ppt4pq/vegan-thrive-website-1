@@ -1,23 +1,15 @@
 export default function Footer() {
     return (
-        <footer className="bg-white rounded-lg shadow-sm w-full">
-            <div className="w-full mx-auto p-4 md:flex md:items-center md:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center">
-                © 2025 <a href="#" className="hover:underline">Vegan Thrive Coaching™</a>
-            </span>
-            <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Home</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Blog</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline">Contact</a>
-                </li>
+        <footer className="bg-gray-100 flex flex-wrap items-center justify-between py-5 px-10 border-t border-gray-300 bottom-0">
+            <p className="w-full md:w-1/3 mb-3 md:mb-0 text-gray-500 text-center md:text-left">
+                © 2025 Vegan Thrive Coaching
+            </p>
+            <a href="/" className="w-full md:w-1/3 flex items-center justify-center mb-3 md:mb-0">Home</a>
+            <ul className="w-full md:w-1/3 flex justify-center md:justify-end space-x-4 text-gray-500">
+                <li><a href="#" className="hover:text-gray-700">Home</a></li>
+                <li><a href="#" className="hover:text-gray-700">Blog</a></li>
+                <li><a href="#" className="hover:text-gray-700">Contact</a></li>
             </ul>
-            </div>
         </footer>
-
     );
 }
