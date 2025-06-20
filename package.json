@@ -11,8 +11,11 @@
   "dependencies": {
     "next": "15.3.3",
     "next-sitemap": "^4.2.3",
+    "notion-client": "^7.4.2",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-notion-x": "^7.4.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

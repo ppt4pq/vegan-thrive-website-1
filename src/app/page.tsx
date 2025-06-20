@@ -1,7 +1,9 @@
+import EmailPopup from "@/components/EmailPopup";
 
 export default function Home() {
   return (
     <div className="bg-gray-300">
+      <EmailPopup />
       <div className="relative flex flex-col header shadow-2xl z-10 bg-white">
         <img src="images/logo2.jpg" alt="vegan thrive logo" className="object-contain max-h-[45vh] bottom-0"></img>
       </div>
@@ -10,7 +12,15 @@ export default function Home() {
           <img src="images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></img>
           <div className="p-10 text-black">
             <h1 className="text-3xl">Meet Kayla</h1>
-            <p className="mt-5 max-w-md">Kayla is a vegan nutrition and life coach located in Richmond, VA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p className="mt-5 max-w-md">
+              Kayla (they/them) is a certified nutrition and wellness coach based in Richmond, Virginia. Vegan since 2020, they’re driven by a deep commitment to animal rights and social justice — and believe that nourishing yourself shouldn't come at the expense of your values or your well-being.
+            </p>
+            <p className="mt-5 max-w-md">
+              With a research-driven approach and a love for systems thinking, Kayla helps values-aligned vegans cut through the noise and find simple, sustainable ways to feel better — physically, mentally, and emotionally. Their work is rooted in curiosity, compassion, and a belief that health looks different for everyone.
+            </p>
+            <p className="mt-5 max-w-md">
+              When they’re not coaching, you’ll find them exploring human and animal behavior, lifting weights, or spending time outside.
+            </p>
           </div>
         </div>
         <div className="p-10 justify-end items-end rounded text-black absolute right-0 flex-col justify-end"> 
