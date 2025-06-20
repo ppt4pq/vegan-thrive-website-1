@@ -1,4 +1,5 @@
 import EmailPopup from "@/components/EmailPopup";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -26,9 +27,9 @@ export default function Home() {
         <div className="p-10 justify-end items-end rounded text-black absolute right-0 flex-col justify-end"> 
           <h2 className="text-black text-2xl">Check out her blog!</h2>
           <ul className="space-y-2 justify-end p-2">
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><a href="/blog" className="">How to Vegan Meal Prep</a></li>
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><a href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Top 5 Plant Proteins</a></li>
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><a href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Mindful Eating Tips</a></li>
+            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="">How to Vegan Meal Prep</Link></li>
+            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Top 5 Plant Proteins</Link></li>
+            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Mindful Eating Tips</Link></li>
           </ul>
         </div>
       </main>

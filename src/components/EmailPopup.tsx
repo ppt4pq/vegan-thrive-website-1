@@ -12,7 +12,7 @@ export default function EmailPopup() {
     }, []);
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault;
+        e.preventDefault();
         alert(`Thanks! We'll keep in touch at: ${email}`);
         setShow(false);
     };

@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect, useState} from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -19,9 +20,9 @@ export default function Navbar() {
     return (
         <nav className="font-sans absolute p-4 w-full z-100">
             <div className="hidden md:flex space-x-5 flex justify-end me-15 text-white">
-                <a href="/" className={linkClass('/')}>Home</a>
-                <a href="/blog" className={linkClass('/blog')}>Blog</a>
-                <a href="/contact" className={linkClass('/contact')}>Contact</a>
+                <Link href="/" className={linkClass('/')}>Home</Link>
+                <Link href="/blog" className={linkClass('/blog')}>Blog</Link>
+                <Link href="/contact" className={linkClass('/contact')}>Contact</Link>
             </div>
             <div className="md:hidden">
                 <button className="focus:outline-none">
