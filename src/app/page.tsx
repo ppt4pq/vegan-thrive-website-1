@@ -15,13 +15,13 @@ export default function Home() {
           <div className="p-10 text-black">
             <h1 className="text-3xl">Meet Kayla</h1>
             <p className="mt-5 max-w-md">
-              Kayla (they/them) is a certified nutrition and wellness coach based in Richmond, Virginia. Vegan since 2020, they’re driven by a deep commitment to animal rights and social justice — and believe that nourishing yourself shouldn't come at the expense of your values or your well-being.
+              Kayla (they/them) is a certified nutrition and wellness coach based in Richmond, Virginia. Vegan since 2020, they&rsquo;re driven by a deep commitment to animal rights and social justice — and believe that nourishing yourself shouldn&rsquo;t come at the expense of your values or your well-being.
             </p>
             <p className="mt-5 max-w-md">
               With a research-driven approach and a love for systems thinking, Kayla helps values-aligned vegans cut through the noise and find simple, sustainable ways to feel better — physically, mentally, and emotionally. Their work is rooted in curiosity, compassion, and a belief that health looks different for everyone.
             </p>
             <p className="mt-5 max-w-md">
-              When they’re not coaching, you’ll find them exploring human and animal behavior, lifting weights, or spending time outside.
+              When they&rsquo;re not coaching, you&rsquo;ll find them exploring human and animal behavior, lifting weights, or spending time outside.
             </p>
           </div>
         </div>
