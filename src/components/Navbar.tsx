@@ -14,7 +14,7 @@ export default function Navbar() {
 
     const linkClass = (path: string) => 
         `px-2 py-1 transition border-b-2 ${
-            pathname === path ? 'border-white' : 'border-transparent'
+            hasMounted && pathname === path ? 'border-white' : 'border-transparent'
             } hover:border-gray-400`;
 
     return (

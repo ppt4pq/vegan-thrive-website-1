@@ -1,16 +1,17 @@
 import EmailPopup from "@/components/EmailPopup";
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="bg-gray-300">
       <EmailPopup />
       <div className="relative flex flex-col header shadow-2xl z-10 bg-white">
-        <img src="images/logo2.jpg" alt="vegan thrive logo" className="object-contain max-h-[45vh] bottom-0"></img>
+        <Image src="images/logo2.jpg" alt="vegan thrive logo" className="object-contain max-h-[45vh] bottom-0"></Image>
       </div>
       <main className="p-20 pt-0 justify-center items-center z-10 shadow-xl mt-15 flex space-x-2 w-full">
         <div className="flex flex-col md:flex-row gap-6 items-center p-10 pt-0">
-          <img src="images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></img>
+          <Image src="images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
           <div className="p-10 text-black">
             <h1 className="text-3xl">Meet Kayla</h1>
             <p className="mt-5 max-w-md">
