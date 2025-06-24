@@ -1,20 +1,30 @@
 import EmailPopup from "@/components/EmailPopup";
 import Link from "next/link";
 import Image from "next/image";
+import BlogSideBar from "@/components/BlogSideCard";
 
 export default function Home() {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-100">
       <EmailPopup />
-      <div className="relative flex flex-col header shadow-2xl z-10 bg-white">
-        <Image src="images/logo2.jpg" alt="vegan thrive logo" className="object-contain max-h-[45vh] bottom-0"></Image>
+      <div className="relative flex flex-col header shadow-2xl z-10 bg-white justify-center items-center">
+        <Image width={500} height={500} src="/images/logo-green-uncompressed.png" alt="vegan thrive logo" className="object-contain max-h-[45vh] bottom-0 justify-center"></Image>
       </div>
-      <main className="p-20 pt-0 justify-center items-center z-10 shadow-xl mt-15 flex space-x-2 w-full">
+      <div className="flex relative width-full">
+          <h1 className="text-5xl text-green-700 absolute bottom-5 left-5">Eat Better.</h1>
+          <Image src="/images/pasta.jpg" alt="vegan tacos" width={500} height={1000}></Image>
+          <h1 className="text-5xl text-green-700 absolute bottom-5 left-130">Feel Better.</h1>
+          <Image src="/images/feel-better.jpg" alt="Kayla smiling with her cat" width="500" height="500"></Image>
+          <h1 className="text-5xl text-green-700 absolute bottom-5 left-260">Thrive.</h1>
+          <Image src="/images/pasta.jpg" alt="vegan tacos" width={500} height={1000}></Image>
+        </div>
+      <main className="p-20 pt-0 justify-center items-center z-10 shadow-xl mt-10 flex flex-col space-x-2 w-full">
+        
         <div className="flex flex-col md:flex-row gap-6 items-center p-10 pt-0">
-          <Image src="images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
+          <Image height="400" width="300" src="/images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
           <div className="p-10 text-black">
-            <h1 className="text-3xl">Meet Kayla</h1>
-            <p className="mt-5 max-w-md">
+            <h1 className="text-3xl border-b-3 border-green-900 border-radius-5 w-60 pb-1">Meet Kayla</h1>
+            <p className="mt-3 max-w-md">
               Kayla (they/them) is a certified nutrition and wellness coach based in Richmond, Virginia. Vegan since 2020, they&rsquo;re driven by a deep commitment to animal rights and social justice — and believe that nourishing yourself shouldn&rsquo;t come at the expense of your values or your well-being.
             </p>
             <p className="mt-5 max-w-md">
@@ -25,14 +35,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="p-10 justify-end items-end rounded text-black absolute right-0 flex-col justify-end"> 
-          <h2 className="text-black text-2xl">Check out her blog!</h2>
-          <ul className="space-y-2 justify-end p-2">
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="">How to Vegan Meal Prep</Link></li>
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Top 5 Plant Proteins</Link></li>
-            <li className="w-full bg-gray-100 px-2 py-1 rounded transition hover:underline"><Link href="/blog" className="hover:underline px-2 py-1 rounded transition bg-gray-100">Mindful Eating Tips</Link></li>
-          </ul>
-        </div>
+        <BlogSideBar />
       </main>
     </div>
   );
