@@ -16,7 +16,7 @@ export default function Home() {
           {/* Eat Better */}
           <div className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
             <Image
-              src="/images/pasta.jpg"
+              src="/images/pasta.JPG"
               alt="vegan tacos"
               width={500}
               height={500}
@@ -44,7 +44,7 @@ export default function Home() {
           {/* Thrive */}
           <div className="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
             <Image
-              src="/images/pasta.jpg"
+              src="/images/pasta.JPG"
               alt="vegan tacos"
               width={500}
               height={500}
