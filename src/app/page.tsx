@@ -1,5 +1,4 @@
 import EmailPopup from "@/components/EmailPopup";
-import Link from "next/link";
 import Image from "next/image";
 import BlogSideBar from "@/components/BlogSideCard";
 import InstagramWidget from "@/components/InstagramWidget";
@@ -59,7 +58,7 @@ export default function Home() {
       </div>
 
       
-      <section className="p-20 pt-0 justify-center items-center z-10 shadow-xl mt-10 flex flex-col space-x-2 w-full">
+      <section className="p-20 pb-0 pt-0 justify-center items-center z-10 shadow-xl mt-10 flex flex-col space-x-2 w-full">
         
         <div className="flex flex-col md:flex-row gap-6 items-center p-10 pt-0">
           <Image height="400" width="300" src="/images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
