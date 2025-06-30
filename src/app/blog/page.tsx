@@ -1,27 +1,22 @@
-import { getPage } from '../../lib/notion';
-import 'react-notion-x/src/styles.css';
-import NotionClientRenderer from '@/components/NotionClientRenderer';
+import { getPublishedPosts } from '@/lib/notion';
+import Link from 'next/link';
 
-const NOTION_PAGE_ID = process.env.NOTION_PAGE_ID!;
+export default async function BlogIndexPage() {
+  const posts = await getPublishedPosts();
 
-/*
-
-export async function getStaticProps() {
-  const NOTION_PAGE_ID = process.env.NOTION_PAGE_ID!;
-  const recordMap = await getPage(NOTION_PAGE_ID);
-  return { props: {recordMap}, revalidate: 60};
-}
-
-*/
-
-export default async function BlogPage() {
-  const recordMap = await getPage(NOTION_PAGE_ID);
-
-    return (
-      <main className="max-w-3xl mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-4">Blog</h1>
-        <NotionClientRenderer recordMap={recordMap} />
-      </main>
-
-    );
+  return (
+    <main className="max-w-3xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">Blog</h1>
+      <ul className="space-y-4">
+        {posts.map((post) => (
+          <li key={post.id} className="border-b pb-2">
+            <Link href={`/blog/${post.slug}`}>
+              <h2 className="text-xl text-green-700 hover:underline">{post.title}</h2>
+            </Link>
+            <p className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
