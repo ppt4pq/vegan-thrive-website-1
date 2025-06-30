@@ -2,23 +2,20 @@ import { getPublishedPosts, getPage } from '@/lib/notion';
 import NotionClientRenderer from '@/components/NotionClientRenderer';
 import type { Metadata } from 'next';
 
+// Good: async function with correct param type
 export async function generateStaticParams() {
   const posts = await getPublishedPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-// This is correct typing for generateMetadata
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: { slug: string } }
+): Promise<Metadata> {
   return {
-    title: params.slug,
+    title: props.params.slug,
   };
 }
 
-// Also correct typing for the page component
 export default async function BlogPostPage({
   params,
 }: {
