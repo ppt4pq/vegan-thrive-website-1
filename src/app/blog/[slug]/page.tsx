@@ -3,7 +3,7 @@ import NotionClientRenderer from '@/components/NotionClientRenderer';
 import { type Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-type Props = {
+type Props2 = {
   params: { slug: string };
 };
 
@@ -12,13 +12,13 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props2): Promise<Metadata> {
   return {
     title: params.slug,
   };
 }
 
-export default async function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: Props2) {
   const posts = await getPublishedPosts();
   const post = posts.find((p) => p.slug === params.slug);
 
