@@ -1,8 +1,6 @@
 {
-    "build": {
-      "env": {
-        "VERCEL_SKIP_BUILD_CACHE": "1"
-      }
+    "env": {
+      "VERCEL_SKIP_BUILD_CACHE": "1"
     }
   }
   
