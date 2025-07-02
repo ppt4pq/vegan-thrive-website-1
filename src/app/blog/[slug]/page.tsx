@@ -5,35 +5,28 @@ import NotionClientRenderer from '@/components/NotionClientRenderer';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-// ✅ REQUIRED for static params
 export async function generateStaticParams() {
   const posts = await getPublishedPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-// ✅ DON'T use a custom type name like PageProps
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: { slug: string } }
+): Promise<Metadata> {
   return {
-    title: params.slug,
+    title: props.params.slug,
   };
 }
 
-// ✅ Keep function name as `Page`, and inline types
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const posts = await getPublishedPosts();
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function Page(
+  props: { params: { slug: string } }
+) {
+  const slug = props.params.slug;
 
-  if (!post) {
-    notFound();
-  }
+  const posts = await getPublishedPosts();
+  const post = posts.find((p) => p.slug === slug);
+
+  if (!post) notFound();
 
   const recordMap = await getPage(post.id);
 

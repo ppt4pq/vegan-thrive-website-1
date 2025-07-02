@@ -1,6 +1,8 @@
 {
-    "env": {
-      "VERCEL_SKIP_BUILD_CACHE": "1"
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      }
     }
   }
   
