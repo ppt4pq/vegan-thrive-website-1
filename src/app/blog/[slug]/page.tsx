@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { getPublishedPosts, getPage } from '@/lib/notion';
 import NotionClientRenderer from '@/components/NotionClientRenderer';
 import { type Metadata } from 'next';
@@ -13,18 +14,26 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
+  const { slug } = await Promise.resolve(params); // ✅ Important!
+
   return {
-    title: params.slug,
+    title: slug,
   };
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
+interface BlogPostPageProps {
   params: { slug: string };
-}) {
+}
+
+export default async function BlogPostPage({
+    params,
+  }: BlogPostPageProps) {
+    const { slug } = await Promise.resolve(params);
+    // ...
+  
+
   const posts = await getPublishedPosts();
-  const post = posts.find((p) => p.slug === params.slug);
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
