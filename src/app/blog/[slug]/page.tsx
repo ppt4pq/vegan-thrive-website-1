@@ -1,32 +1,35 @@
-import * as React from 'react';
+// src/app/blog/[slug]/page.tsx
+
 import { getPublishedPosts, getPage } from '@/lib/notion';
 import NotionClientRenderer from '@/components/NotionClientRenderer';
-import { type Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
+// ✅ REQUIRED for static params
 export async function generateStaticParams() {
   const posts = await getPublishedPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = params;
+// ✅ DON'T use a custom type name like PageProps
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   return {
-    title: slug,
+    title: params.slug,
   };
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = params;
-
+// ✅ Keep function name as `Page`, and inline types
+export default async function Page({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const posts = await getPublishedPosts();
-  const post = posts.find((p) => p.slug === slug);
+  const post = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
     notFound();
