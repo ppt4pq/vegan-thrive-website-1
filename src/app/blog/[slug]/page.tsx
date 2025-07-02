@@ -14,22 +14,18 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = params; // ✅ Important!
-
+  const { slug } = params;
   return {
     title: slug,
   };
 }
 
-interface BlogPostPageProps {
-  params: { slug: string };
-}
-
 export default async function BlogPostPage({
-    params,
-  }: BlogPostPageProps) {
-    const { slug } = params;
-  
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
 
   const posts = await getPublishedPosts();
   const post = posts.find((p) => p.slug === slug);
