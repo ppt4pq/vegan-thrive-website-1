@@ -13,6 +13,8 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   props: { params: { slug: string } }
 ): Promise<Metadata> {
+    console.log('typeof params:', typeof props.params);
+
   return {
     title: props.params.slug,
   };
