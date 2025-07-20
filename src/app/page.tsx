@@ -159,7 +159,7 @@ export default function Home() {
               <li><b>Meal prep guides, recipes, + other resources</b> for use during and after the program</li>
             </ul>
 
-            <p data-aos="fade-up" data-aos-delay="100">What you'll learn:</p>
+            <p data-aos="fade-up" data-aos-delay="100">What you&rsquo;ll learn:</p>
             <ul data-aos="fade-up" data-aos-delay="100" className="list-disc pl-10 space-y-1 m-3">
               <li>How to <b>fuel your body + mind</b> without compromising your values or burning out</li>
               <li>Simple habits you can incorporate into your everyday life to increase your <b>mood + energy levels</b></li>
