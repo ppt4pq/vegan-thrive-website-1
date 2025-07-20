@@ -30,3 +30,7 @@ body {
   background: var(--background);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+b {
+  color: #3d6d43;
+}

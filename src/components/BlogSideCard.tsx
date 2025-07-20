@@ -27,7 +27,7 @@ export default function BlogSideBar() {
           {isOpen ? <ChevronRight /> : <ChevronLeft />}
         </button>
 
-        <h2 className="text-xl font-bold mb-3">Check out her blog!</h2>
+        <h2 className="text-xl font-bold mb-3">Check out the blog!</h2>
         <ul className="space-y-2">
           <li>
             <Link
