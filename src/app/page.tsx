@@ -139,7 +139,7 @@ export default function Home() {
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="100" className="p-6 w-180">
-            <p className="w-170 indent-8">Nourish to Thrive is a 4-week nutrition and wellness coaching program for vegans who want to eat better, feel better, and thrive. In the program, you will learn how to properly fuel and nourish your body and mind in a way that is simple and sustainable. You’ll get 1:1 nutrition and wellness support from a certified nutrition coach and be a part of our supportive vegan community.</p>
+            <p className="w-170 indent-8">Nourish to Thrive is a 4-week nutrition and wellness coaching program for vegans who want to eat better, feel better, and thrive. In the program, you will learn how to properly fuel and nourish your body and mind in a way that is simple and sustainable. You'll get 1:1 nutrition and wellness support from a certified nutrition coach and be a part of our supportive vegan community.</p>
             
             <p data-aos="fade-up" data-aos-delay="100" className="mt-6">Nourish to Thrive is for you if you:</p>
             <ul data-aos="fade-up" data-aos-delay="100" className="list-disc pl-10 space-y-1 m-3">
