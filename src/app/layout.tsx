@@ -4,7 +4,6 @@ import { Poppins } from 'next/font/google';
 import "./globals.css";
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import Head from 'next/head';
 
 /*
 const geistSans = Geist({
@@ -36,9 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
       <body
         className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
