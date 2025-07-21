@@ -44,7 +44,7 @@ export default function Home() {
           {/* Eat Better */}
           <div className={`relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transform transition duration-300 origin-right ${ inView ? 'scale-110' : 'scale-100' }`}>
             <Image
-              src="/images/pasta.JPG"
+              src="/images/french-toast.jpeg"
               alt="vegan tacos"
               width={500}
               height={500}
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
 
       
-      <section data-aos="fade-up" className="p-20 pb-0 pt-0 justify-center items-center z-10 mt-10 flex flex-col space-x-2 w-full">
+      <section data-aos="fade-up" className="p-20 pb-0 pt-0 justify-center items-center z-10 flex flex-col space-x-2 w-full">
         
         <div className="flex flex-col md:flex-row gap-6 items-center p-10 pt-0">
           <Image height="400" width="300" src="/images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
@@ -110,7 +110,8 @@ export default function Home() {
         
       </section>
       <section data-aos="fade-up" id="about" className="p-20 justify-center items-center z-10 text-black flex flex-col space-x-2 w-full bg-white">
-        <h1 className="text-3xl border-b-3 border-green-900 border-radius-5 w-70 text-center pb-1">Nourish to Thrive</h1>
+        
+        <div className="flex flex-col md:flex-row gap-10">
         <div className="hidden grid grid-cols-3 items-center h-20 mt-5 w-80 max-w-7xl mx-auto">
           <div className="relative flex justify-center h-20 w-auto">
           <Image
@@ -138,7 +139,9 @@ export default function Home() {
           />
           </div>
         </div>
+        <div className="flex w-full max-w-7xl mx-auto">
         <div data-aos="fade-up" data-aos-delay="100" className="p-6 w-180">
+          <h1 className="text-3xl border-b-3 border-green-900 border-radius-5 w-70 pb-1 mb-5">Nourish to Thrive</h1>
             <p className="w-170 indent-8">Nourish to Thrive is a 4-week nutrition and wellness coaching program for vegans who want to eat better, feel better, and thrive. In the program, you will learn how to properly fuel and nourish your body and mind in a way that is simple and sustainable. You&rsquo;ll get 1:1 nutrition and wellness support from a certified nutrition coach and be a part of our supportive vegan community.</p>
             
             <p data-aos="fade-up" data-aos-delay="100" className="mt-6">Nourish to Thrive is for you if you:</p>
@@ -167,9 +170,41 @@ export default function Home() {
               <li>How to optimize your habits for <b>long-term success and thriving</b></li>
             </ul>
             <div className="flex items-center w-full justify-center my-5">
-              <button className="cursor-pointer px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Sign Up Now!</button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-nv6yCFG0wFkOG7H-aTOyBsOG8z0XnAxCBGoqqoSwh6wS8A/viewform" className="cursor-pointer px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Sign Up Now!</a>
             </div>
         </div>
+        <div className="w-64 min-h-screen flex flex-col flex-shrink-0">
+          <Image
+            src="/images/minglewood.jpg"
+            alt="Image 1"
+            width={300}
+            height={200}
+            className="rounded shadow-md w-full h-auto object-cover"
+          />
+          <Image
+            src="/images/kayak.jpg"
+            alt="Image 2"
+            width={300}
+            height={200}
+            className="rounded shadow-md w-full h-auto object-cover"
+          />
+          <Image
+            src="/images/smoothie-bowl.jpeg"
+            alt="Image 3"
+            width={300}
+            height={200}
+            className="rounded shadow-md w-full h-auto object-cover"
+          />
+          <Image
+            src="/images/tacos.jpg"
+            alt="Image 4"
+            width={300}
+            height={200}
+            className="rounded shadow-md w-full h-auto object-cover"
+          />
+      </div>
+      </div>
+      </div>
       </section>
     </div>
   );

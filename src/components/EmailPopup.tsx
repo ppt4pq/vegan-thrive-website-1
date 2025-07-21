@@ -28,8 +28,8 @@ export default function EmailPopup() {
                 >
                 ×
                 </button>
-                <h2 className="text-xl font-semibold mb-2 text-black">Join Our Mailing List</h2>
-                <p className="text-sm mb-4 text-gray-600">Stay updated with our latest blogs and sales</p>
+                <h2 className="text-xl font-semibold mb-2 text-black">Subscribe to Our Newsletter</h2>
+                <p className="text-sm mb-4 text-gray-600">Stay updated on our latest articles and offers</p>
                 <form onSubmit={handleSubmit} className="space-y-3">
                 <input
                     type="email"

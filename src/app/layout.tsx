@@ -24,8 +24,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Vegan Thrive Coaching website",
-  description: "Learn how to improve nutrition, fitness, and lifestyle as a vegan and sign up for coaching",
+  title: "Vegan Thrive Coaching",
+  description: "Learn how to improve nutrition, fitness, and lifestyle as a vegan and sign up for coaching the Vegan Thrive newsletter",
 };
 
 export default function RootLayout({
