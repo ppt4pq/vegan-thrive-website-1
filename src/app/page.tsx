@@ -50,7 +50,7 @@ export default function Home() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <h1 className="absolute bottom-4 left-4 text-3xl text-green-700 font-semibold bg-white bg-opacity-80 px-2 py-1 rounded">
+            <h1 className="absolute bottom-4 left-4 text-4xl text-green-800 font-semibold bg-white/80 px-2 py-1 rounded">
               Eat Better.
             </h1>
           </div>
@@ -64,7 +64,7 @@ export default function Home() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <h1 className="absolute bottom-4 left-4 text-3xl text-green-700 font-semibold bg-white bg-opacity-80 px-2 py-1 rounded">
+            <h1 className="absolute bottom-4 left-4 text-4xl text-green-800 font-semibold bg-white/80 px-2 py-1 rounded">
               Feel Better.
             </h1>
           </div>
@@ -78,7 +78,7 @@ export default function Home() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <h1 className="absolute bottom-4 left-4 text-3xl text-green-700 font-semibold bg-white bg-opacity-80 px-2 py-1 rounded">
+            <h1 className="absolute bottom-4 left-4 text-4xl text-green-800 font-semibold bg-white/80 px-2 py-1 rounded">
               Thrive.
             </h1>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
 
       
-      <section data-aos="fade-up" className="p-20 pb-0 pt-0 justify-center items-center z-10 flex flex-col space-x-2 w-full">
+      <section data-aos="zoom-in-up" className="p-20 pb-0 pt-0 justify-center items-center z-10 flex flex-col space-x-2 w-full">
         
         <div className="flex flex-col md:flex-row gap-6 items-center p-10 pt-0">
           <Image height="400" width="300" src="/images/kayla-headshot-unedited-shorter.jpg" alt="picture of Kayla" className="w-64 md:w-80 object-cover rounded h-auto"></Image>
@@ -112,37 +112,46 @@ export default function Home() {
       <section data-aos="fade-up" id="about" className="p-20 justify-center items-center z-10 text-black flex flex-col space-x-2 w-full bg-white">
         
         <div className="flex flex-col md:flex-row gap-10">
-        <div className="hidden grid grid-cols-3 items-center h-20 mt-5 w-80 max-w-7xl mx-auto">
-          <div className="relative flex justify-center h-20 w-auto">
-          <Image
-          src="/images/minglewood.jpg"
-          alt="Minglewood Logo"
-          fill
-          className="object-contain"
-          />
-          </div>
-          <div className="flex justify-center items-center h-full w-auto">
-          <Image
-          src="/images/x-1.png"
-          alt="X symbol"
-          width={28}
-          height={28}
-          className="h-7 w-auto"
-          />
-          </div>
-          <div className="relative flex justify-center h-20 w-auto">
-          <Image
-          src="/images/logo-black.png"
-          alt="Vegan Thrive logo"
-          fill
-          className="object-contain"
-          />
+        
+        <div className="flex w-full max-w-7xl mx-auto items-stretch flex-col md:flex-row">
+        <div data-aos="fade-up" data-aos-delay="100" className="p-6 md:w-180 flex-1 me-5 flex flex-col">
+        <div className="flex flex-row items-center w-full max-w-7xl mx-auto mb-5">
+          <h1 className="text-3xl border-b-3 border-green-900 border-radius-5 pb-1">
+            Nourish to Thrive
+          </h1>
+          <div className="hidden flex space-x-2 items-center h-20 ms-10">
+            <div className="relative flex justify-center w-auto h-16">
+              <Image
+                src="/images/minglewood.jpg"
+                alt="Minglewood Logo"
+                width={120}
+                height={60}
+                className="object-contain"
+              />
+            </div>
+            <div className="flex justify-center items-center h-full w-auto">
+              <Image
+                src="/images/x-1.png"
+                alt="X symbol"
+                width={28}
+                height={28}
+                className="h-5 w-auto"
+              />
+            </div>
+            <div className="relative flex justify-center w-auto h-16">
+              <Image
+                src="/images/logo-black.png"
+                alt="Vegan Thrive logo"
+                width={60}
+                height={60}
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
-        <div className="flex w-full max-w-7xl mx-auto">
-        <div data-aos="fade-up" data-aos-delay="100" className="p-6 w-180">
-          <h1 className="text-3xl border-b-3 border-green-900 border-radius-5 w-70 pb-1 mb-5">Nourish to Thrive</h1>
-            <p className="w-170 indent-8">Nourish to Thrive is a 4-week nutrition and wellness coaching program for vegans who want to eat better, feel better, and thrive. In the program, you will learn how to properly fuel and nourish your body and mind in a way that is simple and sustainable. You&rsquo;ll get 1:1 nutrition and wellness support from a certified nutrition coach and be a part of our supportive vegan community.</p>
+
+
+            <p className="indent-8">Nourish to Thrive is a 4-week nutrition and wellness coaching program for vegans who want to eat better, feel better, and thrive. In the program, you will learn how to properly fuel and nourish your body and mind in a way that is simple and sustainable. You&rsquo;ll get 1:1 nutrition and wellness support from a certified nutrition coach and be a part of our supportive vegan community.</p>
             
             <p data-aos="fade-up" data-aos-delay="100" className="mt-6">Nourish to Thrive is for you if you:</p>
             <ul data-aos="fade-up" data-aos-delay="100" className="list-disc pl-10 space-y-1 m-3">
@@ -173,13 +182,15 @@ export default function Home() {
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-nv6yCFG0wFkOG7H-aTOyBsOG8z0XnAxCBGoqqoSwh6wS8A/viewform" className="cursor-pointer px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Sign Up Now!</a>
             </div>
         </div>
-        <div className="w-64 min-h-screen flex flex-col flex-shrink-0">
+        <div className="sm:w-auto flex-shrink-0">
+          <div className="grid grid-cols-3 gap-3 md:flex md:flex-col md:w-60">
           <Image
-            src="/images/minglewood.jpg"
+            src="/images/tacos.jpg"
             alt="Image 1"
             width={300}
             height={200}
             className="rounded shadow-md w-full h-auto object-cover"
+            data-aos="fade-up"
           />
           <Image
             src="/images/kayak.jpg"
@@ -187,6 +198,7 @@ export default function Home() {
             width={300}
             height={200}
             className="rounded shadow-md w-full h-auto object-cover"
+            data-aos="fade-up"
           />
           <Image
             src="/images/smoothie-bowl.jpeg"
@@ -194,14 +206,9 @@ export default function Home() {
             width={300}
             height={200}
             className="rounded shadow-md w-full h-auto object-cover"
+            data-aos="fade-up"
           />
-          <Image
-            src="/images/tacos.jpg"
-            alt="Image 4"
-            width={300}
-            height={200}
-            className="rounded shadow-md w-full h-auto object-cover"
-          />
+          </div>
       </div>
       </div>
       </div>
