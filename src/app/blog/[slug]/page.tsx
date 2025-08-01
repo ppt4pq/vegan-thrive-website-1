@@ -1,29 +1,30 @@
 // src/app/blog/[slug]/page.tsx
-
 import { getPublishedPosts, getPage } from '@/lib/notion';
 import NotionClientRenderer from '@/components/NotionClientRenderer';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export async function generateStaticParams() {
-  const posts = await getPublishedPosts();
-  return posts.map((post) => ({ slug: post.slug }));
-}
+export const dynamic = 'force-dynamic'; // Force dynamic resolution
 
 export async function generateMetadata(
-  props: { params: { slug: string } }
+  { params }: { params: { slug: string } }
 ): Promise<Metadata> {
-    console.log('typeof params:', typeof props.params);
+  // Defensive check for params being async in edge environments
+  const { slug } = await Promise.resolve(params);
+
+  const posts = await getPublishedPosts();
+  const post = posts.find((p) => p.slug === slug);
 
   return {
-    title: props.params.slug,
+    title: post?.title || 'Post',
   };
 }
 
 export default async function Page(
-  props: { params: { slug: string } }
+  { params }: { params: { slug: string } }
 ) {
-  const slug = props.params.slug;
+  // Defensive await for edge case compatibility
+  const { slug } = await Promise.resolve(params);
 
   const posts = await getPublishedPosts();
   const post = posts.find((p) => p.slug === slug);
