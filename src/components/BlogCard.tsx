@@ -7,7 +7,7 @@ interface BlogCardProps {
     slug: string;
   }
 
-export default function BlogCard({ title, date, excerpt, slug }: BlogCardProps) {
+export default function BlogCard({ title, excerpt, slug }: BlogCardProps) {
     return ( 
         <Link href={slug ? `/blog/${slug}` : "/blog"} className='block group'>
         <div className='group relative border-green-700 border-1 p-10 h-90 w-90 transition-all duration-0 hover:bg-[#003000] hover:text-white'>
