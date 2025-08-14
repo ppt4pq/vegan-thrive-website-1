@@ -20,10 +20,24 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.float-hover:hover {
+  animation: float 2.5s ease-in-out infinite;
+}
+
 body {
   background: white;
   color: var(--background);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  height:  100%;
 }
 
 .header {

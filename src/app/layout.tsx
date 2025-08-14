@@ -37,6 +37,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
       </head>
       <body
         className={`${poppins.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

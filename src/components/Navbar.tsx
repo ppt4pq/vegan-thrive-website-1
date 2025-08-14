@@ -12,14 +12,22 @@ export default function Navbar() {
         setHasMounted(true);
     }, []);
 
+    let navClasses = "font-sans absolute p-4 w-full z-100 text-white";
+    let borderColor = 'border-white';
+    if (pathname === '/blog') {
+        navClasses += 'text-black';
+        borderColor = 'border-black';
+
+    }
+
     const linkClass = (path: string) => 
         `px-2 py-1 transition border-b-2 ${
-            hasMounted && pathname === path ? 'border-white' : 'border-transparent'
+            hasMounted && pathname === path ? {borderColor} : 'border-transparent'
             } hover:border-gray-400`;
 
     return (
-        <nav className="font-sans absolute p-4 w-full z-100">
-            <div className="hidden md:flex space-x-5 flex justify-end me-15 text-white">
+        <nav className={navClasses}>
+            <div className="hidden md:flex space-x-5 flex justify-end me-15">
                 <Link href="/" className={linkClass('/')}>Home</Link>
                 <Link href="/blog" className={linkClass('/blog')}>Blog</Link>
                 <Link href="/contact" className={linkClass('/contact')}>Contact</Link>
