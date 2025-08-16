@@ -39,9 +39,14 @@ export default async function Page(
   const recordMap = await getPage(post.id);
 
   return (
-    <div className="max-w-3xl mx-auto p-6 my-20 bg-white rounded-xl shadow">
-      <NotionClientRenderer recordMap={recordMap} />
+    <div className='max-w-3xl mx-auto my-20'>
+      <h1 className='px-6 text-center border-b-2 border-green-900 pb-5 text-2xl'>{post.title}</h1>
+      <div className="py-6 mt-5 bg-white rounded-xl shadow">
+        <NotionClientRenderer recordMap={recordMap} />
+      </div>
     </div>
+    
+    
   );
 }
 
