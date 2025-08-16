@@ -12,12 +12,11 @@ export default function Navbar() {
         setHasMounted(true);
     }, []);
 
-    let navClasses = "font-sans absolute p-4 w-full z-100 text-white";
-    let borderColor = 'border-white';
-    if (pathname === '/blog') {
-        navClasses += 'text-black';
-        borderColor = 'border-black';
-
+    let navClasses = "font-sans absolute p-4 w-full z-100 text-black ";
+    let borderColor = 'border-black';
+    if (pathname === '/') {
+        navClasses += 'text-white ';
+        borderColor = 'border-white';
     }
 
     const linkClass = (path: string) => 

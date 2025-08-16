@@ -15,6 +15,7 @@ export async function getPublishedPosts() {
   const databaseId = process.env.NOTION_BLOG_DATABASE_ID!;
   const response = await notionDB.databases.query({
     database_id: databaseId,
+    page_size: 10,
     filter: {
       property: 'Published',
       checkbox: {
@@ -48,4 +49,12 @@ export async function getPublishedPosts() {
           : '',
     };
   });
+}
+
+export async function getStaticProps() {
+  const posts = await getPublishedPosts();
+  return {
+    props: { posts },
+    revalidate: 60,
+  };
 }
